@@ -1,0 +1,526 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "brandon-grotesque", san-serif;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+.background{
+    background: repeating-linear-gradient(
+  45deg,
+  AliceBlue,
+  AliceBlue 1px,
+  white 1px,
+  white 3px
+);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+.head_container{
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 75px;
+  background-color: lightgrey;
+}
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+h1{
+  font-size: 50px;
+  color: #214291;
+  line-height: 0px;
+}
+h2{
+  color: #214291;
+  font-size: 40px;
+  line-height: 0px;
+}
+h3{
+  color: white;
+  font-size: 40px;
+  line-height: 0px;
+}
+h4{
+  color: grey;
+  line-height: 0px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+p{
+  line-height: 20px;
+}
+.head_container{
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 75px;
+  background-color: lightgrey;
+  border-bottom: 1px solid black;
+  box-shadow: 0px -6px 10px 10px  rgba(0, 0, 0, .8), 0 -7px 10px -5px black inset;
+  -webkit-transition: background-color 1.3s, box-shadow 1.3s;
+  background: rgba(199,199,199,1);
+background: -moz-linear-gradient(top, rgba(199,199,199,1) 0%, rgba(245,245,245,1) 29%, rgba(245,245,245,1) 34%, rgba(194,194,194,1) 50%, rgba(176,174,176,1) 71%, rgba(102,102,102,1) 96%, rgba(102,102,102,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(199,199,199,1)), color-stop(29%, rgba(245,245,245,1)), color-stop(34%, rgba(245,245,245,1)), color-stop(50%, rgba(194,194,194,1)), color-stop(71%, rgba(176,174,176,1)), color-stop(96%, rgba(102,102,102,1)), color-stop(100%, rgba(102,102,102,1)));
+background: -webkit-linear-gradient(top, rgba(199,199,199,1) 0%, rgba(245,245,245,1) 29%, rgba(245,245,245,1) 34%, rgba(194,194,194,1) 50%, rgba(176,174,176,1) 71%, rgba(102,102,102,1) 96%, rgba(102,102,102,1) 100%);
+background: -o-linear-gradient(top, rgba(199,199,199,1) 0%, rgba(245,245,245,1) 29%, rgba(245,245,245,1) 34%, rgba(194,194,194,1) 50%, rgba(176,174,176,1) 71%, rgba(102,102,102,1) 96%, rgba(102,102,102,1) 100%);
+background: -ms-linear-gradient(top, rgba(199,199,199,1) 0%, rgba(245,245,245,1) 29%, rgba(245,245,245,1) 34%, rgba(194,194,194,1) 50%, rgba(176,174,176,1) 71%, rgba(102,102,102,1) 96%, rgba(102,102,102,1) 100%);
+background: linear-gradient(to bottom, rgba(199,199,199,1) 0%, rgba(245,245,245,1) 29%, rgba(245,245,245,1) 34%, rgba(194,194,194,1) 50%, rgba(176,174,176,1) 71%, rgba(102,102,102,1) 96%, rgba(102,102,102,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7c7c7', endColorstr='#666666', GradientType=0 );
+}
+.head_logo{
+  position: fixed;
+  width: 250px;
+  height: 55px;
+  left: 50%;
+  margin-left: -125px;
+  margin-top: 10px;
+  background-image: url("http://www.bhildebrand.com/rando/logo-drop.png");
+  background-size: 250px auto;
+  background-repeat: no-repeat;
+  -webkit-transition: left 1.7s, margin-left 1.7s, background-image 1.5s;
+}
+.site_container{
+  height: auto;
+}
+.home_button_container{
+  position: absolute;
+  top: calc(50% + 100px);
+  left: 50%;
+  margin-top: -125px;
+  margin-left: -291.5px;
+  width: 583px;
+}
+.home_button{
+  width: 175px;
+  height: 70px;
+  float: left;
+  background-color: white;
+  box-shadow: 0px 3px 4px grey;
+  outline: 1px solid #214291;
+  cursor: pointer;
+}
+.home_button_text{
+  width: 175px;
+  color: #214291;
+  position: absolute;
+  text-align: center;
+  bottom: 18px;
+  font-size: 22px;
+}
+.advisor{
+  margin-right: 20px;
+}
+.client{
+  margin-right: 20px;
+}
+.head_logo_after{
+  left: 0px;
+  margin-left: 0px;
+  cursor: pointer;
+}
+.nav{
+  float:right;
+  opacity: 0;
+  -webkit-transition: opacity .8s, background-color .3s;
+  padding: 27px 20px 24.5px 20px;
+  cursor: pointer;
+  display: none;
+  color: white;
+  text-shadow: 1px 1px 2px #666666;
+
+}
+.nav_active{
+  background-color: orange;
+   box-shadow: 0 -7px 10px -5px black inset;
+background: rgba(255,183,0,1);
+background: -moz-linear-gradient(top, rgba(255,183,0,1) 0%, rgba(255,213,0,1) 29%, rgba(255,213,0,1) 34%, rgba(242,174,3,1) 50%, rgba(255,171,3,1) 71%, rgba(189,117,0,1) 96%, rgba(189,117,0,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,183,0,1)), color-stop(29%, rgba(255,213,0,1)), color-stop(34%, rgba(255,213,0,1)), color-stop(50%, rgba(242,174,3,1)), color-stop(71%, rgba(255,171,3,1)), color-stop(96%, rgba(189,117,0,1)), color-stop(100%, rgba(189,117,0,1)));
+background: -webkit-linear-gradient(top, rgba(255,183,0,1) 0%, rgba(255,213,0,1) 29%, rgba(255,213,0,1) 34%, rgba(242,174,3,1) 50%, rgba(255,171,3,1) 71%, rgba(189,117,0,1) 96%, rgba(189,117,0,1) 100%);
+background: -o-linear-gradient(top, rgba(255,183,0,1) 0%, rgba(255,213,0,1) 29%, rgba(255,213,0,1) 34%, rgba(242,174,3,1) 50%, rgba(255,171,3,1) 71%, rgba(189,117,0,1) 96%, rgba(189,117,0,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,183,0,1) 0%, rgba(255,213,0,1) 29%, rgba(255,213,0,1) 34%, rgba(242,174,3,1) 50%, rgba(255,171,3,1) 71%, rgba(189,117,0,1) 96%, rgba(189,117,0,1) 100%);
+background: linear-gradient(to bottom, rgba(255,183,0,1) 0%, rgba(255,213,0,1) 29%, rgba(255,213,0,1) 34%, rgba(242,174,3,1) 50%, rgba(255,171,3,1) 71%, rgba(189,117,0,1) 96%, rgba(189,117,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb700', endColorstr='#bd7500', GradientType=0 );
+}
+.nav:hover{
+}
+.nav_active:hover{
+  background-color: pink;
+  color: black;
+
+}
+.about_container{
+  position: relative;
+  float: left;
+  left:0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+.about_image{
+  background-image: url("http://www.bhildebrand.com/rando/image1.jpg");
+  width: 45vw;
+  height: 100vh;
+  background-size: 50vw auto;
+}
+.about_content_container{
+  position: absolute;
+  width: 45vw;
+  height: calc(100vh - 75px);
+  left: calc(45vw + 40px);
+  bottom: 0;
+  overflow: scroll;
+}
+.our_team_container{
+  display: none;
+  position: relative;
+  float: left;
+  width: 100vw;
+  height: 100vh;
+}
+.team_container{
+  position:absolute;
+  margin-top: calc(25vh + 30px);
+  margin-left: 2.5vw;
+}
+.team_member{
+  width: 15vw;
+  height: 50vh;
+  max-height: 400px;
+  background-color: #22009d;
+  float: left;
+  margin: 0 2vw;
+  box-shadow: 2px 2px 4px grey;
+  cursor: pointer;
+}
+.team_member_text{
+  position: absolute;
+  width: 15vw;
+  text-align: center;
+  bottom: calc(-1.75vw - 10px);
+  font-size:1.75vw;
+  cursor: pointer;
+}
+.member_content_box{
+  position: fixed;
+  width: 60vw;
+  height: 60vh;
+  background-color: white;
+  margin-left: 20vw;
+  margin-top: calc(20vh + 30px);
+  box-shadow: 2px 2px 15px black, 0 0 2000px 2000px rgba(0, 0, 0, 0.5);
+  display: none;
+  outline: 1px solid #214291;
+  z-index: 3;
+}
+.member_picture{
+  background-color: #22009d;
+  width: 20vw;
+  height: 100%;
+  float: left;
+}
+.member_info{
+  width: 34vw;
+  height: 100%;
+  padding: 0 5%;
+  float: left;
+  overflow: scroll;
+}
+.escape{
+  color: red;
+  position: absolute;
+  right: 8px;
+  top: 2px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.container{
+  -webkit-transition: opacity 1s;
+}
+.products_container{
+  position: relative;
+  float: left;
+  margin: 125px 20vw 0px 20vw;
+  width: 60vw;
+  height: 100vh;
+  min-height: 100vh;
+  display: none;
+}
+.product_bar{
+  float: left;
+  width: 60vw;
+  height: 75px;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 2px 2px 15px grey;
+  -webkit-transition: height 1.5s;
+  overflow: hidden;
+  outline: 1px solid #214291;
+}
+.product_bar_active{
+  height: 350px;
+}
+.product_bar_head{
+  width: 60vw;
+  height: 45px;
+  padding-top: 27px;
+  padding-bottom: 3px;
+  text-align: center;
+  background-color: #214291;
+  box-shadow: 0 -16px 20px -10px black inset;
+  color: white;
+  -webkit-transition: background-color .3s, box-shadow .3s;
+  cursor: pointer;
+}
+.product_info{
+  margin: 60px 30px;
+}
+.product_background{
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("");
+  background-size: 100vw auto;
+  opacity: 100;
+}
+.rule{
+  margin-top: -8px;
+  height: 3px;
+  width: 100%;
+  background-color: red;
+}
+.news_container{
+  position: relative;
+  float: left;
+  margin: 125px 17.5vw 20px 17.5vw;
+  width: 65vw;
+  height: auto;
+  display: none;
+}
+.news_object{
+  height: auto;
+  width: auto;
+  float: left;
+  box-shadow: 2px 2px 15px grey;
+  margin-top: 10px;
+  background-color: white;
+  outline: 1px solid #214291;
+}
+.news_object_header{
+  margin: 0px;
+  padding: 5px 20px;
+  background-color: #214291;
+  color: white;
+  box-shadow: 0 -16px 20px -10px black inset;
+  padding-bottom: 23px;
+}
+.date{
+  color: lightgrey;
+  margin-top: -25px;
+}
+.news_object_image{
+  background-image: url("http://www.bhildebrand.com/rando/image3.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 300px;
+}
+.news_object_content{
+  margin: 20px;
+  margin-left: 15px;
+  padding-left: 5px;
+  border-left: 6px solid lightgrey;
+}
+.news_link{
+  margin: -20px 0 20px 25px;
+}
+.contact_container{
+  position: relative;
+  float: left;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+.contact_content_container{
+  float: left;
+  padding-left: 2vw;
+  padding-top: 2vh;
+  margin: 23vh 20vw;
+  height: 48vh;
+  width: 50vw;
+
+}
+.footer_container{
+  background-color: #214291;
+  width: 100%;
+  height: 150px;
+  position: relative;
+  float: left;
+  display: none;
+  margin-top: 0px;
+}
+.footer_nav_container{
+  position: absolute;
+  float: left;
+  margin: 40px 5vw;
+  width: 25vw;
+}
+.footer_nav{
+  cursor: pointer;
+  color: white;
+  float: left;
+  width: 8.6vw;
+  text-align: left;
+}
+.footer_nav:hover{
+  color: orange;
+  text-decoration: underline;
+}
+.social_media_icon_container{
+  position: absolute;
+  right: 5vw;
+  bottom: 30px;
+  width: auto;
+  margin-right: 10px;
+}
+.social_media_icon{
+  float: right;
+  width: 40px;
+  height: 40px;
+  background-color: #214291;
+  border-radius: 25px;
+  margin: 0 1.2vw;
+  cursor: pointer;
+}
+.social_media_icon:hover{
+  background-color: orange;
+}
+.newsletter_container{
+  position: absolute;
+  right: 5vw;
+  top: 40px;
+  width: auto;
+}
+.email_input{
+  float: right;
+  background-color: white;
+  width: 15vw;
+  height: 25px;
+  margin-left: 10px;
+}
+.submit_email{
+  background-color:orange;
+  width: 40px;
+  height: 25px;
+  float: right;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+.container{
+  min-height: 400px;
+}
+.content_box{
+  min-height: 300px;
+}
+.join_newsletter{
+  float: right;
+  color: orange;
+}
+.dropdown{
+  display: none;
+}
+}
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .nav{
+      width: 100vw;
+      background-color: #214291;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 1px solid white;
+    }
+.nav_container{
+  position: fixed;
+  left: 0;
+  top: -220px;
+  -webkit-transition: top 1.5s;
+}
+.dropdown{
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  display: inline;
+  position: absolute;
+  bottom: -50px;
+  left: 0px;
+}
+.dropdown_active{
+  top: 0px;
+}
+.head_container{
+  height: 50px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.head_logo{
+  position: fixed;
+  width: 250px;
+  height: 40px;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: 5px;
+  background-image: url("http://www.bhildebrand.com/rando/logo-drop.png");
+  background-size: auto 40px;
+  background-repeat: no-repeat;
+  -webkit-transition: left 1.7s, margin-left 1.7s, background-image 1.5s;
+}
+.home_button_container{
+  margin: 100px 0;
+  position: relative;
+}
+.home_button{
+  width: 70%;
+  outline: 1px solid black;
+  padding: 25px 0;
+  height: 20px;
+  margin-left: 15%;
+  margin-bottom: 15px;
+  text-align: center;
+  float: left;
+
+}
+.about_container{
+  display: none;
+}
+.our_team_container{
+  display: none;
+}
+.products_container{
+  display: none;
+}
+.news_container{
+  display:none;
+}
+.contact_container{
+  display:none;
+}
+.footer_container{
+  display: none;
+}
+}
