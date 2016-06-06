@@ -448,7 +448,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb700', end
   and (orientation: portrait) {
     .nav{
       width: 100vw;
-      background-color: #214291;
       color: white;
       text-align: center;
       padding: 10px 0;
@@ -456,6 +455,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb700', end
     }
 .nav_container{
   position: fixed;
+  background-color: #214291;
   left: 0;
   top: -220px;
   height: 220px;
