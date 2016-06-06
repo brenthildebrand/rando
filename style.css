@@ -458,6 +458,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb700', end
   position: fixed;
   left: 0;
   top: -220px;
+  height: 220px;
   -webkit-transition: top 1.5s;
 }
 .dropdown{
